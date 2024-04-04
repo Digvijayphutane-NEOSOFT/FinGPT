@@ -4,11 +4,11 @@ import yfinance as yf
 import pandas as pd
 from datetime import date, datetime, timedelta
 from collections import defaultdict
-
+from app import finhub_key, HF_TOK
 from data import get_news
 from prompt import get_company_prompt, get_prompt_by_row, sample_news
 
-finnhub_client = finnhub.Client(api_key=os.environ.get("FINNHUB_KEY"))
+finnhub_client = finnhub.Client(api_key=os.environ.get(finhub_key))
 
 
 def get_curday():

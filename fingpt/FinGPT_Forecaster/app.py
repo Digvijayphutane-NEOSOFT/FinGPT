@@ -14,9 +14,10 @@ from collections import defaultdict
 from datetime import date, datetime, timedelta
 from transformers import AutoTokenizer, AutoModelForCausalLM, TextStreamer
 
-
-access_token = os.environ["HF_TOKEN"]
-finnhub_client = finnhub.Client(api_key=os.environ["FINNHUB_API_KEY"])
+finhub_key = "co77e69r01qj6a5mkpngco77e69r01qj6a5mkpo0"
+HF_TOK = "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"
+access_token = os.environ[HF_TOK]
+finnhub_client = finnhub.Client(api_key=os.environ[finhub_key])
 
 base_model = AutoModelForCausalLM.from_pretrained(
     'meta-llama/Llama-2-7b-chat-hf',

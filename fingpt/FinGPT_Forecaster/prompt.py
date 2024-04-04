@@ -5,10 +5,10 @@ import finnhub
 import yfinance as yf
 import pandas as pd
 from openai import OpenAI
-
+from app import finhub_key, HF_TOK
 from indices import *
 
-finnhub_client = finnhub.Client(api_key=os.environ.get("FINNHUB_KEY"))
+finnhub_client = finnhub.Client(api_key=os.environ.get(finhub_key))
 
 
 def get_company_prompt(symbol):

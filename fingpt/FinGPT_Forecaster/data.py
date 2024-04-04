@@ -13,11 +13,11 @@ from collections import defaultdict
 import datasets
 from datasets import Dataset
 from openai import OpenAI
-
+from app import finhub_key, HF_TOK
 from indices import *
 from prompt import get_all_prompts
 
-finnhub_client = finnhub.Client(api_key=os.environ.get("FINNHUB_KEY"))
+finnhub_client = finnhub.Client(api_key=os.environ.get(finhub_key))
 client = OpenAI(api_key=os.environ.get("OPENAI_KEY"))
 
 
